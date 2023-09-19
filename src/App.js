@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import Nav from "./components/Nav";
+import Hero from "./components/Hero";
+import BtnCard from "./components/BtnCard";
+import Slider from "./components/Slider";
+import SocialMedia from "./components/SocialMedia";
+import Tenent from "./components/Tenent";
+import Management from "./components/Management";
+console.log(SocialMedia)
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route exact
+            path="/"
+            element={
+              <>
+                <Hero />
+                <BtnCard />
+                <Slider/>
+                <SocialMedia />
+              </>
+            }
+          /> 
+          <Route exact
+            path="/tenent"
+            element={<Tenent/> }
+          /> 
+          <Route exact
+            path="/management"
+            element={<Management/> }
+          />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
-}
+};
 
 export default App;

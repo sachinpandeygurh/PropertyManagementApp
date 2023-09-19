@@ -1,21 +1,24 @@
 .App {
+  position: relative;
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  position: absolute;
+  left: 1em;
+  height: 10vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .App-logo { 
+    animation: App-logo-spin infinite 5s linear; 
   }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: white;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +38,40 @@
   to {
     transform: rotate(360deg);
   }
+}
+.bg-brand{
+  /* background:#733dd9 !important; */
+  background-color: #00a0ea ;
+}
+.hero {
+  height: 25em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.slider{
+  margin-top: 5em !important;
+}
+.btncard  {  position: relative;
+margin: -57px auto 0px;
+transition: all 0.3s ease 0s;
+z-index: 1;
+max-width: 672px;
+min-width: 672px;
+}
+.text-brand{
+  color:#00a0ea !important;
+}
+.boder-dott{
+  border: 1px dotted rgba(128, 128, 128, 0.482) !important;
+}
+.carousel-control-prev , .carousel-control-next{
+  display: none;
+}
+.carousel-indicators{
+  bottom: -2em;
+}
+.mt-8{
+  margin-top: 8em;
 }
