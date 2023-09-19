@@ -58,7 +58,7 @@ margin: -57px auto 0px;
 transition: all 0.3s ease 0s;
 z-index: 1;
 max-width: 672px;
-min-width: 672px;
+/* min-width: 672px; */
 }
 .text-brand{
   color:#00a0ea !important;
@@ -74,4 +74,13 @@ min-width: 672px;
 }
 .mt-8{
   margin-top: 8em;
+}
+ul li:hover a {
+  color:#00a0ea !important;
+}
+ul li:click a {
+  color:#00a0ea !important;
+}
+.active{
+  color:#00a0ea !important;
 }
